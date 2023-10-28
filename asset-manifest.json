@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/chukchansi-react/static/css/main.073c9b0a.css",
+    "main.js": "/chukchansi-react/static/js/main.b818aad5.js",
+    "static/js/787.d5f0a89b.chunk.js": "/chukchansi-react/static/js/787.d5f0a89b.chunk.js",
+    "static/media/logo.svg": "/chukchansi-react/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/chukchansi-react/index.html",
+    "main.073c9b0a.css.map": "/chukchansi-react/static/css/main.073c9b0a.css.map",
+    "main.b818aad5.js.map": "/chukchansi-react/static/js/main.b818aad5.js.map",
+    "787.d5f0a89b.chunk.js.map": "/chukchansi-react/static/js/787.d5f0a89b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.b818aad5.js"
+  ]
+}
