@@ -1,19 +1,91 @@
+:root {
+  /* title */
+  --bg-nav: #461220;
+  --text-nav: #ffdab3;
+  /* main body of content */
+  --border: #4f3a09;
+  --border-light: #bfa07e;
+  --border-highlight: #ffffff;
+  --bg-primary: #f2e3d3;
+  --text-primary: #4f3a09;
+  /* darker inline section (ex. example sentences) */
+  --bg-secondary: #dbb78f;
+  --text-secondary: #4f3a09;
+  /* lighter input form (ex. search bar) */
+  --bg-tertiary: #ffffff;
+  --text-tertiary: #75544b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman';
+  /* box-sizing: border-box; */
+}
+
 .App {
+  overflow: hidden;
+}
+
+/* NAV BAR */
+
+.NavBar {
+  background-color: var(--bg-nav);
+  color: var(--text-nav);
+  border-bottom: 1px solid var(--border-highlight);
+
+  display: block;
+  /* position: absolute; */
+  /* top: 0vh; */
+  width: 100vw;
+  padding: 1.25vh;
+  
   text-align: center;
+  font-size: 3vh;
+
+  /* z-index: 2; */ /* keep hanging tabs on top of other content */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* SEARCH BAR */
+
+.SearchPanel {
+  background-color: var(--bg-primary);
+  border-bottom: 4px solid var(--border);
+
+  display: block;
+  /* position: absolute; */
+  overflow: visible;
+  padding: 1vh;
+  /* top: 5.5vh; */
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.SearchBar {
+  color: var(--text-tertiary);
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-light);
+  border-radius: 3vh;
+  outline: none;
+  
+  margin: 1px; /* prevent size from changing on highlight */
+  padding: 0 50px 0 2vh;
+  box-sizing: border-box;
+  width: 80vw;
+
+  font-size: 3vh;
+}
+.SearchBar:focus {
+  border: 2px solid var(--text-tertiary);
+
+  margin: 0px; /* prevent size from changing on highlight */
 }
 
-.App-header {
+
+
+
+/* /////////////////////////////////////// */
+
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,9 +94,20 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.App-link {
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* .App-link {
   color: #61dafb;
 }
 
@@ -35,4 +118,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
