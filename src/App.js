@@ -5,9 +5,10 @@ import './App.css';
 //// 10/28
 // 2.0 hrs: research React and read documentation
 // 0.5 hrs: set up React project and config for Github Pages
-// 0.5 hrs: begin update to CSS 3; begin dev mobile web app in React
+// 0.5 hrs: begin dev mobile web app
 //// 10/29
-// 1.5 hrs: incorporate responsive design and fluid typography for mobile web app
+// 1.5 hrs: update navbar and search box to React + responsive CSS 3
+// 2.0 hrs: redesign search results for mobile + update to React + responsive CSS 3
 
 function NavBar () {
   return (
@@ -25,11 +26,33 @@ function SearchPanel () {
   );
 }
 
+function SearchResultPanel () {
+  let words = [];
+  for (let i = 0; i < 30; i++) words.push({base: 'Word '+i, trans: 'Trans '+i});
+  return (
+    <div className='SearchResultPanel'>
+      {words.map( word => <SearchResult word={word} /> )}
+    </div>
+  );
+}
+function SearchResult (props) {
+  return (
+    <div className='SearchResult'>
+      {props.word.base}
+      <br/>
+      <span className='SearchResultTranslation'>{props.word.trans}</span>
+      {(Math.random()<0.2) && <div className='AudioIcon' />}
+      {(Math.random()<0.2) && <div className='ImageIcon' />}
+    </div>
+  );
+}
+
 function App () {
   return (
     <div className='App'>
       <NavBar />
       <SearchPanel />
+      <SearchResultPanel />
     </div>
   );
 }

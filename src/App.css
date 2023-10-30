@@ -24,6 +24,8 @@
 }
 
 .App {
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -32,7 +34,7 @@
 .NavBar {
   background-color: var(--bg-nav);
   color: var(--text-nav);
-  border-bottom: 1px solid var(--border-highlight);
+  border-bottom: 0.15vh solid var(--border-highlight);
 
   display: block;
   /* position: absolute; */
@@ -50,7 +52,7 @@
 
 .SearchPanel {
   background-color: var(--bg-primary);
-  border-bottom: 4px solid var(--border);
+  border-bottom: 0.5vh solid var(--border);
 
   display: block;
   /* position: absolute; */
@@ -61,8 +63,8 @@
 }
 
 .SearchBar {
-  color: var(--text-tertiary);
   background-color: var(--bg-tertiary);
+  color: var(--text-tertiary);
   border: 1px solid var(--border-light);
   border-radius: 3vh;
   outline: none;
@@ -78,6 +80,75 @@
   border: 2px solid var(--text-tertiary);
 
   margin: 0px; /* prevent size from changing on highlight */
+}
+
+/* SEARCH RESULTS */
+
+.SearchResultPanel {
+  background-color: var(--bg-primary);
+
+  display: block;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none;  /* Hide scrollbar for Firefox */
+  /* top: 10.5hv; */
+  width: 100vw;
+  height: 87.25vh;
+}
+.SearchResultPanel::-webkit-scrollbar { display: none; } /* Hide scrollbar for Chrome, Safari and Opera */
+.SearchResultPanel div + div {
+  border-top: 0.25vh solid var(--text-tertiary);
+}
+
+.SearchResult {
+  cursor: pointer;
+  
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  /* border: 2px solid #75544b; */
+  /* border-radius: 4px; */
+
+  margin: 0px 4px;
+  padding: 2px 10px;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  overflow: hidden;
+}
+.NoResultsText {
+  color: var(--text-tertiary);
+
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  font-size: 20px;
+  /*font-style: italic;*/
+}
+
+.SearchResultTranslation {
+  /* color: var(--border-light); */
+  font-weight: normal;
+}
+.AudioIcon {
+  width:20px;
+  height:20px;
+  float:right;
+  
+  background: url('source/audio.png');
+  background-size: contain;
+}
+.ImageIcon {
+  width:20px;
+  height:20px;
+  float:right;
+  
+  background: url('source/image.png');
+  background-size: contain;
 }
 
 
