@@ -8,7 +8,9 @@ import './App.css';
 // 0.5 hrs: begin dev mobile web app
 //// 10/29
 // 1.5 hrs: update navbar and search box to React + responsive CSS 3
-// 2.0 hrs: redesign search results for mobile + update to React + responsive CSS 3
+// 2.0 hrs: redesign search results for mobile; continue update to React + responsive CSS 3
+//// 10/30
+// 3.0 hrs: refactor responsiveness to be device-independent, for both portrait+landscape
 
 function NavBar () {
   return (
@@ -38,7 +40,7 @@ function SearchResultPanel () {
 function SearchResult (props) {
   return (
     <div className='SearchResult'>
-      {props.word.base}
+      <span className='SearchResultBase'>{props.word.base}</span>
       <br/>
       <span className='SearchResultTranslation'>{props.word.trans}</span>
       {(Math.random()<0.2) && <div className='AudioIcon' />}
@@ -51,31 +53,15 @@ function App () {
   return (
     <div className='App'>
       <NavBar />
-      <SearchPanel />
-      <SearchResultPanel />
+      <div className='Content'>
+        <SearchPanel />
+        <SearchResultPanel />
+      </div>
     </div>
   );
 }
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+//<SearchPanel />
+//<SearchResultPanel />
 
 export default App;
